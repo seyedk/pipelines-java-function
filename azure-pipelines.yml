@@ -44,7 +44,7 @@ steps:
   displayName: Publish Artifact
   inputs:
     PathtoPublish: $(build.artifactstagingdirectory)    
-
+#
 - task: AzureFunctionApp@1
   displayName: Azure Function App deploy
   inputs:
@@ -52,3 +52,5 @@ steps:
     appType: functionApp
     appName: $(appName)
     package: $(build.artifactstagingdirectory)/$(appName)
+#
+#
